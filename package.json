@@ -4,7 +4,8 @@
   "description": "A speedy course on how to build web components using vanilla JS or Stencil.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "go": "git checkout -f $1 && npm run start",
+    "start": "serve ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/joelalejandro/building-web-components/issues"
   },
-  "homepage": "https://github.com/joelalejandro/building-web-components#readme"
+  "homepage": "https://github.com/joelalejandro/building-web-components#readme",
+  "devDependencies": {
+    "serve": "^10.1.2"
+  }
 }
