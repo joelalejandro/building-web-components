@@ -38,6 +38,10 @@ class MaterialButton extends HTMLElement {
         border-radius: 4px;
     }`;
 
+    enterPressedEventHandler() {
+        return new CustomEvent("enterPressed");
+    }
+
     get color() {
         return this.getAttribute("color");
     }
@@ -46,10 +50,25 @@ class MaterialButton extends HTMLElement {
         this.setAttribute("color", color);
     }
 
+    get onEnterPressed() {
+        return Function(this.getAttribute("onEnterPressed")).bind(this);
+    }
+
     constructor() {
         super();
 
         this.render();
+        this.bindEvents()
+    }
+
+    bindEvents() {
+        this.addEventListener("keyup", /** @param {KeyboardEvent} e */ e => {
+            if (e.key === "Enter") {
+                this.dispatchEvent(this.enterPressedEventHandler());
+            }
+        });
+
+        this.addEventListener("enterPressed", () => this.onEnterPressed());
     }
 
     render() {
