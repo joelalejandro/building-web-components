@@ -1,6 +1,6 @@
 class MaterialButton extends HTMLElement {
     CSS = `:host button {
-        background: #6200ee;
+        background: ${this.color};
         color: #fff;
         padding: 0 16px;
         font-family: Roboto,sans-serif;
@@ -37,6 +37,14 @@ class MaterialButton extends HTMLElement {
         vertical-align: middle;
         border-radius: 4px;
     }`;
+
+    get color() {
+        return this.getAttribute("color");
+    }
+
+    set color(color) {
+        this.setAttribute("color", color);
+    }
 
     constructor() {
         super();
