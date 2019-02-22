@@ -1,6 +1,6 @@
 # building-web-components
 
-This is a branched, iterative repo of demos, showing examples about [Stencil](https://stenciljs.com). Use `git checkout -f` to navigate through the branches in your favourite shell or explore them with the GitHub branch list.
+This is a branched, iterative repo of demos, showing examples about Web components and [Stencil](https://stenciljs.com). Use `git checkout -f` to navigate through the branches in your favourite shell or explore them with the GitHub branch list.
 
 - [`01-vanillajs`](https://github.com/joelalejandro/building-web-components/tree/01-vanillajs) contains a basic example of a Web Component with embedded styles using Shadow DOM.
 - [`02-props`](https://github.com/joelalejandro/building-web-components/tree/02-props) shows how to add a prop using HTML attributes with some basic level of data binding.
